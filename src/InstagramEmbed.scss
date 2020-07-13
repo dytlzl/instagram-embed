@@ -1,0 +1,185 @@
+.instagram-embed {
+  background: white;
+  border-radius: 3px;
+  border: 1px solid rgb(219, 219, 219);
+  box-shadow: none;
+  display: block;
+  img, video {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .ie-header {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 54px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    .ie-avatar-container {
+      background-color: #fff;
+      padding: 2px;
+      border-radius: 50%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+
+      .ie-avatar {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .ie-header-text {
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-flex-shrink: 1;
+      flex-shrink: 1;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+      margin: 0 10px;
+      overflow: hidden;
+    }
+
+    .ie-username {
+      text-decoration: none;
+      color: #262626;
+      font-weight: 600;
+      text-overflow: ellipsis;
+      width: 100%;
+      white-space: nowrap;
+
+      .ie-username-text {
+        font-size: 14px;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .ie-feedback {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 10px 10px;
+
+    a {
+      margin-right: 12px;
+
+      * {
+        display: flex;
+        background-image: url(https://www.instagram.com/static/bundles/es6/sprite_embed_2x_031e3f72ab64.png/031e3f72ab64.png);
+        width: 24px;
+        height: 24px;
+        background-size: 172px 160px;
+      }
+    }
+
+    .ie-heart-button {
+       span {
+         background-position: -136px -87px;
+       }
+    }
+
+    .ie-comment-button {
+      span {
+        background-position: -136px -37px;
+      }
+    }
+
+    .ie-share-button {
+       span {
+         background-position: -50px -136px;
+       }
+    }
+
+    .ie-save-button {
+      margin-left: auto;
+      margin-right: 0;
+      span {
+        background-position: -25px -136px;
+      }
+    }
+
+  }
+
+  .ie-caption {
+    white-space: pre-wrap;
+    display: block;
+    line-height: 18px;
+    padding: 0 10px 10px;
+  }
+}
+
+$transition: .2s;
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .play-button {
+    display: block;
+    position: absolute;
+    height: 135px;
+    left: 50%;
+    margin-left: -67px;
+    margin-top: -67px;
+    top: 50%;
+    width: 135px;
+    z-index: 2;
+    outline: none;
+    background-image: url(https://www.instagram.com/static/bundles/es6/sprite_video_2x_4ca1223795d3.png/4ca1223795d3.png);
+    background-size: 271px 149px;
+    background-position: 0 0;
+    transition: $transition;
+    visibility: visible;
+    opacity: 1;
+
+    &.is-playing {
+      opacity: 0;
+    }
+  }
+
+  .video-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    outline: none;
+  }
+}
